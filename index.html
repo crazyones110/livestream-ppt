@@ -1,50 +1,232 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>皮卡丘的轻分享</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.type = 'text/css'
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css'
+      document.getElementsByTagName('head')[0].appendChild(link)
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section data-markdown>
+            自我介绍 
+            
+            我叫皮卡丘, 本科双非, 硕士中上985(考研上岸), 均是计算机.
 
-		<script src="js/reveal.js"></script>
+            系(ru)统(men)学习前端其实是在19年的6月买了饥人谷的系统班开始的.
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+            这么多年计算机学下来, 后端, 算法, 桌面端开发均有涉(cai)猎(ji),
+
+            但最后发现还是前端最有意思. 2020年3月初开始春招,现在已经拿到支付宝和字节跳动的offer(逃
+          </section>
+        </section>
+        <section>
+          <section>
+            给大家看下我的简历
+          </section>
+          <section
+            data-background-iframe="https://crazyones110.github.io/resume.github.io/index"
+            data-background-interactive
+            data-background-color="#fff"
+          ></section>
+        </section>
+        <section>
+          大厂面试风格并举例
+          <section data-markdown>
+            # 阿里
+          </section>
+          <section data-markdown>
+            阿里特别喜欢问项目, 而且问的特别深
+            比如我的简历里就有我做小程序的途中用了redis, 用了mongo
+            阿里就问了我mongo的实务说一下, redis缓存机制是啥...
+          </section>
+          <section data-markdown>
+            阿里喜欢问基础,问底层. 比如我就被问到了js动画和css动画区别,`for in`
+            `for of` 区别, 万恶的`this` 这里以万恶的`this`举例
+          </section>
+          <section data-markdown>
+            ```javascript 
+            const a = { 
+              a: 10, 
+              fn() { 
+                console.log(this.a) 
+              } 
+            }
+            const b = a.fn 
+            b() 
+            ```
+          </section>
+          <section data-markdown>
+            ```javascript 
+            var a = 5 
+            class A { 
+              a = 10 
+              fn() { 
+                console.log(this.a)
+              } 
+            } 
+            const b = new A().fn 
+            b() 
+            ```
+          </section>
+          <section data-markdown># 腾讯</section>
+          <section>
+            腾讯我三面之前拒了
+
+            但前两面面试的还是比较友好, 所以我知道有一招面腾讯有奇效
+          </section>
+          <section>
+            你自己做一个微信小程序#滑稽<br>
+            然后功能丰富一点, 技术栈多一点, 简历里吹一点<br>
+            腾讯的面试官会很乐意和你大段时间地聊你做的这个小程序的#滑稽<br>
+            因为你是自己做的, 所以问你这个小程序肯定问题不大, 那问别的的时间不久少了吗#滑稽
+          </section>
+          <section data-markdown># 字节跳动</section>
+          <section data-markdown>
+            两个字
+
+            # 刷题
+          </section>
+          <section data-markdown>
+            但前端在leader面之前不会问lc的hard的题目的, 所以先把medium难度的基础打好
+
+            - 这里推荐下剑指offer, ***一定要完完整整的过一遍!***
+              因为我就被问到了原题(逃
+
+              推荐[牛客网在线刷题](https://www.nowcoder.com/ta/coding-interviews)
+
+            - 还推荐一个 [别人总结的刷题博客](http://47.98.159.95/leetcode-js/nav/)
+          </section>
+          <section data-markdown>
+            # 共同之处
+          </section>
+          <section data-markdown>
+            我发现字节, 腾讯, 阿里都很喜欢问安全相关的
+
+            各位要注意呀
+
+            - 阿里我被问到了JSONP和CSRF
+            - 腾讯我被问到了XSS和SQL注入
+            - 字节我被问到了DNS劫持(喵喵喵?
+          </section>
+          
+        </section>
+        <section>
+          我的学习之路
+          <section>
+            我在知乎上看到一句话, 10年前的前端入门是没有那么多补习班的. <br>
+            现在前端繁荣了, 所以涌现出很多补习班. 如果能在里面挑到好的, 那么带你入门也是极好的.
+          </section>
+          <section>
+            因为我是读了研才接触了前端(导师派的活是前端, 哭了), 然后才接触的, 突然发现前端才是我计算机行业里的兴趣所在吧. <br>
+            我一直对计算机不是很感冒, 但是本科稀里糊涂地选了计算机. 我其实对语言感兴趣😂, 我家乡话和英语贼6.(六级600多(逃 <br>
+            所以确定了走前端这个方向之后, 斟酌再三, 来到了谷里. 师从方姐.
+          </section>
+          <section>
+            方姐教学的确有一套的, 不是填鸭, 而是引导你, 教方法. <br>
+            还经常卖个破绽勾引你, 我很喜欢.
+          </section>
+          <section>
+            但毕竟师傅领进门, 修行在个人.
+          </section>
+          <section data-markdown>
+            我谷里毕业之后, 除了做导师要求的项目之外, 还会自己做项目.
+
+            切记, 方姐的确教得好, 也只是领路人, 只有自己做出一点东西, 才能在***踩坑中轮回不止***, 然后才能进步!
+          </section>
+          <section data-markdown>
+            大家如果是因为前端好找工作才学前端的话, 那可能做不到我上面说的.
+
+            但也问题不大, 在公司里做项目也可以学习.
+
+            但如果是对前端感兴趣的话, 更重要的是自己动手, 不过好像说起来很容易做起来有点难哈(逃
+
+            前端你懂得, 良性循环获取成就感我觉得是在计算机里各个方向里最容易的了#滑稽
+
+            奥利给?
+          </section>
+        </section>   
+        <section>
+          分享一点面试过程中可能会用到的学习资源
+          <section data-markdown>
+            CSRF: 
+            - https://www.youtube.com/watch?v=eWEgUcHPle0
+            - https://www.youtube.com/watch?v=vRBihr41JTo
+            - https://www.youtube.com/watch?v=hW2ONyxAySY
+          </section>
+          <section data-markdown>
+            算法图解: 
+            - https://algorithm-visualizer.org/
+            - https://github.com/MisterBooo/LeetCodeAnimation
+          </section>
+          <section data-markdown>
+            算法图解: 
+            - https://algorithm-visualizer.org/
+            - https://github.com/MisterBooo/LeetCodeAnimation
+            - [牛客网刷剑指offer](https://www.nowcoder.com/ta/coding-interviews)
+          </section>
+          <section data-markdown>
+            杂: 
+            - [浏览器重绘(repaint)重排(reflow)与优化[浏览器机制]](https://juejin.im/post/5c15f797f265da61141c7f86#heading-19)
+            - [display:none与visibility:hidden的恩怨情仇](https://juejin.im/post/5bb02ea4e51d450e935c76ac)
+            - [https](https://www.youtube.com/watch?v=T4Df5_cojAs)
+          </section>
+          <section data-markdown>
+            vue: 
+            - [Vue响应式----数据响应式原理](https://juejin.im/post/5a0e53965188254dd935f850)
+            - [当面试官问你Vue响应式原理，你可以这么回答他](https://juejin.im/post/5adf0085518825673123da9a)
+          </section>
+        </section>
+        <section>
+          面试技巧: <br>
+          hr面讲故事
+        </section>
+        <section 
+          data-markdown data-background-image="https://i0.hdslb.com/bfs/article/d43189eee4c1f689f2f42dfa6a1382a5be977c28.jpg@1320w_824h.webp"
+        >
+          # 来自由提问吧
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        hash: true,
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/highlight/highlight.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+        ],
+      })
+    </script>
+  </body>
 </html>
